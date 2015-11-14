@@ -79,7 +79,7 @@ public class Movie implements Serializable {
     private String actors;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "movieId")
-    private Collection<ShowTiming> showTimingCollection;
+    private transient Collection<ShowTiming> showTimingCollection;
 
     public Movie() {
     }

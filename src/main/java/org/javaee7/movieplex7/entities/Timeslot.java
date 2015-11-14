@@ -82,7 +82,7 @@ public class Timeslot implements Serializable {
     private String endTime;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "timingId")
-    private Collection<ShowTiming> showTimingCollection;
+    private transient Collection<ShowTiming> showTimingCollection;
 
     public Timeslot() {
     }
