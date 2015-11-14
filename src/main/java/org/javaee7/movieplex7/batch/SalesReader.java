@@ -55,7 +55,7 @@ import javax.inject.Named;
 @Dependent
 @Named
 public class SalesReader extends AbstractItemReader {
-
+	private final static Logger LOGGER = Logger.getLogger(SalesReader.class.getName()); 
     private BufferedReader reader;
 
     @Override
@@ -72,9 +72,9 @@ public class SalesReader extends AbstractItemReader {
         String string = null;
         try {
             string = reader.readLine();
-            System.out.println("SalesReader.readItem: " + string);
+            LOGGER.info("SalesReader.readItem: " + string);
         } catch (IOException ex) {
-            Logger.getLogger(SalesReader.class.getName()).log(Level.SEVERE, null, ex);
+            LOGGER.log(Level.SEVERE, null, ex);
         }
         return string;
     }
