@@ -72,7 +72,7 @@ public class Theater implements Serializable {
     private int capacity;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "theaterId")
-    private Collection<ShowTiming> showTimingCollection;
+    private transient Collection<ShowTiming> showTimingCollection;
 
     public Theater() {
     }
