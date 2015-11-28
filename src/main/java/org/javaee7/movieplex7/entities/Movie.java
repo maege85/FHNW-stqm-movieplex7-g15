@@ -41,6 +41,7 @@ package org.javaee7.movieplex7.entities;
 
 import java.io.Serializable;
 import java.util.Collection;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;

@@ -40,6 +40,7 @@
 package org.javaee7.movieplex7.rest;
 
 import java.util.List;
+
 import javax.persistence.EntityManager;
 
 /**

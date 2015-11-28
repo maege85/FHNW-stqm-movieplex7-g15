@@ -40,6 +40,7 @@
 package org.javaee7.movieplex7.client;
 
 import java.io.Serializable;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 

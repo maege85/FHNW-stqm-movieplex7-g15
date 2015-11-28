@@ -51,7 +51,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
-import org.javaee7.movieplex7.batch.SalesBean;
 import org.javaee7.movieplex7.entities.Movie;
 import org.javaee7.movieplex7.entities.ShowTiming;
 
