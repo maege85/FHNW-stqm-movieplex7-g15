@@ -42,8 +42,6 @@ package org.javaee7.movieplex7.booking;
 import java.io.Serializable;
 import java.util.List;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.faces.flow.FlowScoped;
 import javax.inject.Named;
@@ -51,7 +49,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
-import org.javaee7.movieplex7.batch.SalesBean;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.javaee7.movieplex7.entities.Movie;
 import org.javaee7.movieplex7.entities.ShowTiming;
 
@@ -63,7 +62,7 @@ import org.javaee7.movieplex7.entities.ShowTiming;
 public class Booking implements Serializable {
 
 	
-	private final static Logger LOGGER = Logger.getLogger(Booking.class.getName()); 
+	 static Log log = LogFactory.getLog(Booking.class);
 	
     int movieId;
     String startTime;
@@ -84,7 +83,7 @@ public class Booking implements Serializable {
         try {
             return em.createNamedQuery("Movie.findById", Movie.class).setParameter("id", movieId).getSingleResult().getName();
         } catch (NoResultException e) {
-        	LOGGER.log(Level.SEVERE, "exception: movie name not found", e);
+        	log.info("exception: movie name not found", e);
             return "";
         }
     }
@@ -123,7 +122,7 @@ public class Booking implements Serializable {
                     .getTheaterId()
                     .getId().toString();
         } catch (NoResultException e) {
-        	LOGGER.log(Level.SEVERE, "Exception: no theater found", e);
+        	log.info("exception: no theater found", e);
             return "none";
         }
     }

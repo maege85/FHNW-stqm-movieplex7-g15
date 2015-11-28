@@ -5,7 +5,6 @@
     <groupId>org.glassfish</groupId>
     <artifactId>movieplex7</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
 
     <name>Java EE 7 Hands-on Lab Solution</name>
 
@@ -16,6 +15,21 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+        	<groupId>junit</groupId>
+        	<artifactId>junit</artifactId>
+        	<version>4.11</version>
+        </dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.11</version>
+		</dependency>
     </dependencies>
 
     <build>
@@ -63,5 +77,6 @@
         </plugins>
     </build>
 
+    <packaging>war</packaging>
 </project>
 

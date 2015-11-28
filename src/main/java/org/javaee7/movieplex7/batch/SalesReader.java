@@ -45,6 +45,7 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.batch.api.chunk.AbstractItemReader;
 import javax.enterprise.context.Dependent;
 import javax.inject.Named;

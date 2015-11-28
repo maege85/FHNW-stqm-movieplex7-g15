@@ -40,8 +40,11 @@
 package org.javaee7.movieplex7.client;
 
 import java.io.Serializable;
+
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+
+import org.apache.log4j.Logger;
 
 /**
  * @author Arun Gupta
@@ -49,12 +52,13 @@ import javax.inject.Named;
 @Named
 @SessionScoped
 public class MovieBackingBean implements Serializable {
-
+	final static Logger logger = Logger.getLogger(MovieBackingBean.class);
     int movieId;
     String movieName;
     String actors;
 
     public int getMovieId() {
+    	logger.info("This is an info");
         return movieId;
     }
 

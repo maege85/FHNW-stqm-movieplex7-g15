@@ -44,15 +44,16 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
+
 import javax.json.Json;
 import javax.json.stream.JsonParser;
-import static javax.json.stream.JsonParser.Event.KEY_NAME;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyReader;
 import javax.ws.rs.ext.Provider;
+
 import org.javaee7.movieplex7.entities.Movie;
 
 /**

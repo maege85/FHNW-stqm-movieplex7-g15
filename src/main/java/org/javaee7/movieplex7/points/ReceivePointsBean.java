@@ -42,6 +42,7 @@ package org.javaee7.movieplex7.points;
 import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

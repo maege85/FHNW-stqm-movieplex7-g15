@@ -44,6 +44,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
+
 import javax.json.Json;
 import javax.json.stream.JsonGenerator;
 import javax.ws.rs.Produces;
@@ -52,6 +53,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
+
 import org.javaee7.movieplex7.entities.Movie;
 
 /**
