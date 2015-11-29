@@ -46,8 +46,8 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -60,6 +60,14 @@
             	<header>Movieplex - stqm Case Study</header>
             	<footer>Copyright 2015 - Denzler, Kropp - IMVS, FHNW</footer>
             </configuration>
+              <executions>
+			    <execution>
+			      <id>attach-javadocs</id>
+			      <goals>
+			        <goal>jar</goal>
+			      </goals>
+			    </execution>
+			  </executions>
             </plugin>
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
@@ -78,6 +86,5 @@
         </plugins>
     </build>
 
-    <packaging>war</packaging>
 </project>
 
